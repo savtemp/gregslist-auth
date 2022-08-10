@@ -22,11 +22,10 @@ class JobsService{
         ProxyState.jobs = [...ProxyState.jobs, job]
     }
 
-    // FIXME issue with delete id?? 
     async deleteJob(jobId){
         let url = `api/jobs/${jobId}`
         await api.delete(url)
-        ProxyState.jobs = ProxyState.jobs.filter(j => j.id != id)
+        ProxyState.jobs = ProxyState.jobs.filter(j => j.id != jobId)
     }
 }
 

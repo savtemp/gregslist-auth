@@ -27,7 +27,7 @@ class HousesService{
     async deleteHouse(houseId){
         let url = `api/houses/${houseId}`
         await api.delete(url)
-        ProxyState.houses = ProxyState.houses.filter(h => h.id != id)
+        ProxyState.houses = ProxyState.houses.filter(h => h.id != houseId)
     }
 }
 

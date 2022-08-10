@@ -22,8 +22,8 @@ class CarsService{
         return car
     }
 
-    async editCar(cardId, carData){
-        let car = await this.getCarById(cardId)
+    async editCar(carId, carData){
+        let car = await this.getCarById(carId)
 
         car.make = carData.make || car.make
         car.model = carData.model || car.model
@@ -36,8 +36,8 @@ class CarsService{
         return car
     }
 
-    async deleteCar(cardId){
-        let car = await this.getCarById(cardId)
+    async deleteCar(carId){
+        let car = await this.getCarById(carId)
 
         await car.remove()
         return car

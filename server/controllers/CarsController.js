@@ -8,7 +8,7 @@ export class CarsController extends BaseController{
         .get('', this.getCars)
         .post('', this.createCar)
         .get('/:carId', this.getCarById)
-        .put('/:cardId', this.editCar)
+        .put('/:carId', this.editCar)
         .delete('/:carId', this.deleteCar)
     }
 

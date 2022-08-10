@@ -2,6 +2,7 @@ import { Job } from "../Models/Job.js";
 
 export function getJobForm(job = new Job({})) {
     let submitAction = `app.jobsController.createJob()`
+
     if(job.id){
         submitAction = `app.jobsController.editJob('${job.id}')`
     }
@@ -11,11 +12,11 @@ export function getJobForm(job = new Job({})) {
         <h3 class="text-primary">List Your Job</h3>
             <div class="row">
                 <div class="col-4">
-                    <label class="form-label" for="name">Title</label>
+                    <label class="form-label" for="title">Title</label>
                     <input class="form-control" type="text" id="title" name="title" value="${job.title}">
                 </div>
                 <div class="col-4">
-                    <label class="form-label" for="name">Pay</label>
+                    <label class="form-label" for="pay">Pay</label>
                     <input class="form-control" type="text" id="pay" name="pay" value="${job.pay}">
                 </div>
             <label class="form-label" for="img">Image</label>

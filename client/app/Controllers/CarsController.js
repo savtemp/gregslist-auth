@@ -78,6 +78,7 @@ export class CarsController{
     try {
       window.event.preventDefault()
       let form = window.event.target
+
       let carData = {
         id: carId,
         make: form.make.value,
@@ -88,6 +89,7 @@ export class CarsController{
         description: form.description.value,
       }
       await carsService.editCar(carData)
+      
     } catch (error) {
       console.error('[Edit Car]', error)
       Pop.error(error)

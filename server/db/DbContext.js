@@ -3,14 +3,17 @@ import { AccountSchema } from '../models/Account'
 
 import { CarSchema } from '../models/Car.js';
 import { HouseSchema } from '../models/House.js';
+import { JobSchema } from '../models/Job.js';
 
 import { ValueSchema } from '../models/Value'
 
 class DbContext {
   Values = mongoose.model('Value', ValueSchema);
   Account = mongoose.model('Account', AccountSchema);
+  
   Cars = mongoose.model('Cars', CarSchema);
   Houses = mongoose.model('Houses', HouseSchema)
+  Jobs = mongoose.model('Jobs', JobSchema)
 }
 
 export const dbContext = new DbContext()

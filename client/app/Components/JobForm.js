@@ -11,8 +11,8 @@ export function getJobForm(job = new Job({})) {
         <h3 class="text-primary">List Your Job</h3>
             <div class="row">
                 <div class="col-4">
-                    <label class="form-label" for="name">Jobs</label>
-                    <input class="form-control" type="text" id="jobs" name="jobs" value="${job.title}">
+                    <label class="form-label" for="name">Title</label>
+                    <input class="form-control" type="text" id="title" name="title" value="${job.title}">
                 </div>
                 <div class="col-4">
                     <label class="form-label" for="name">Pay</label>
